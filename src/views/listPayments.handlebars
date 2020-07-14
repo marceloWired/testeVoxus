@@ -1,0 +1,47 @@
+{{#each errors}}
+<div class="alert alert-danger">
+    {{text}}
+</div>
+{{else}}
+
+{{/each}}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID da Transação</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Data</th>
+            <th scope="col">Taxa Externa</th>
+            <th scope="col">Comentários</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each payments}}
+        <tr>
+            <td>
+                <a href="/editPayment?id={{id}}">Editar</a>
+                <a href="/deletePayment?id={{id}}">Excluir</a>
+                {{id}}
+            </td>
+            <td>
+                {{title}}
+            </td>
+            <td>
+                {{value}}
+            </td>
+            <td>
+                {{date}}
+            </td>
+            <td>
+                {{externalTax}}
+            </td>
+            <td>
+                {{comments}}
+            </td>
+        </tr>
+        {{else}}
+
+        {{/each}}
+    </tbody>
+</table>
