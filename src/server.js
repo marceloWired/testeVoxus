@@ -6,9 +6,10 @@ const mongoose = require('mongoose');
 const handlebars = require('express-handlebars');
 const routes = require('./routes');
 const port = 3000;
+const { urlConnect } = require('../config.json')
 
 //CONNECTING DATABASE
-mongoose.connect('mongodb+srv://admin:admin@cluster0-zpxtd.mongodb.net/testeVoxus?retryWrites=true&w=majority', {
+mongoose.connect(urlConnect, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

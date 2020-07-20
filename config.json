@@ -1,0 +1,3 @@
+{
+    "urlConnect": "mongodb+srv://admin:admin@cluster0-zpxtd.mongodb.net/testeVoxus?retryWrites=true&w=majority"
+}
